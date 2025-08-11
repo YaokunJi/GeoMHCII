@@ -1,0 +1,14 @@
+_target_: "proteinworkshop.models.graph_encoders.geomhcii.GeoMHCIIModel"
+path: ${env.paths.root_dir}/esm/
+model: "ESM-2-650M"
+post_embed_fusion: True
+num_heads: 8
+finetune: False
+num_layers: 6 
+emb_dim: 512 
+activation: relu
+norm: batch 
+aggr: "sum" 
+pool: "max" 
+residual: True 
+dropout: 0.1

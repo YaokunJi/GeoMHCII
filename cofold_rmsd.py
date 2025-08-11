@@ -3,8 +3,9 @@ import pandas as pd
 import os
 import warnings
 
-from Bio.PDB import MMCIFParser, PDBParser, Superimposer
+from pathlib import Path
 from itertools import combinations
+from Bio.PDB import MMCIFParser, PDBParser, Superimposer
 
 class AlignmentTool:
     """
@@ -149,8 +150,10 @@ if __name__ == "__main__":
     place the cofolded structures under ``gen_path_root''
     download parsed experimental pMHCII structures under 
     """
-    gen_path_root = "PATH/OF/COFOLDED/STRUCTURES/ROOT"
-    df_reference = pd.read_csv("./data/exp_data_info.csv", index_col=0)
+    gen_path_root = Path("PATH/OF/COFOLDED/STRUCTURES/ROOT")
+    ref_path = Path("./data/exp_data_info.csv")
+    result_path = Path("./data/cofold_rmsd.csv")
+    df_reference = pd.read_csv(ref_path, index_col=0)
     exp_structures_path = "./data/exp_data"
     all_gen_cofold = ["af3", "chai-1", "protenix"]
     
@@ -175,4 +178,4 @@ if __name__ == "__main__":
             records = [aligner.align_and_calculate_rmsd([source_file, target_file]) for source_file in source_files]
             iter_average_rmsd = min(records) 
             df_reference.loc[df_reference["pdb_name"] == pdb, gen] = round(iter_average_rmsd, 3) 
-            df_reference.to_csv("../data/cofold_rmsd.csv", encoding='utf-8')
+            df_reference.to_csv(result_path, encoding='utf-8')

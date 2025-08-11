@@ -1,0 +1,13 @@
+datamodule:
+  _target_: "proteinworkshop.datasets.geomhcii.MHCIIDataModule"
+  path: ${env.paths.data}/mhcii/ # Directory where the dataset is stored
+  pdb_dir: ${env.paths.data}/mhcii/raw # Directory where raw PDB/mmtf files are stored
+  format: "cif" # Format of the raw PDB/MMTF files
+  num_workers: 4 # Number of workers for dataloader
+  pin_memory: True # Pin memory for dataloader
+  batch_size: 32 # Batch size for dataloader
+  dataset_fraction: 1.0 # Fraction of the dataset to use
+  transforms: ${transforms} # Transforms to apply to dataset examples
+  overwrite: False # Whether to overwrite the dataset if it already exists
+  in_memory: True # Whether to load the entire dataset into memory
+num_classes: 2 # Number of classes
