@@ -51,16 +51,7 @@ parameters:
   ckpt_path:
     values:
       [
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/epoch_0.ckpt",
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/epoch_1.ckpt",
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/epoch_2.ckpt",
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/epoch_3.ckpt",
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/epoch_4.ckpt",
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/epoch_5.ckpt",
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/epoch_6.ckpt",
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/epoch_7.ckpt",
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/epoch_8.ckpt",
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/epoch_9.ckpt",
+        "path/to/checkpoints"
       ]
 
   +test:

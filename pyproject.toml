@@ -2,7 +2,6 @@
 name = "proteinworkshop"
 version = "0.2.5"
 description = ""
-authors = ["Arian Jamasb <arian@jamasb.io>"]
 readme = "README.md"
 keywords = ["proteins", "deep learning", "datasets", "benchmarks"]
 homepage = "https://www.proteins.sh"

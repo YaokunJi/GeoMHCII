@@ -33,7 +33,7 @@ task_name: "visualise"
 compile: True
 
 # simply provide checkpoint path and output directory to embed dataset and write attributed PDB files
-ckpt_path: /home/jamasba/scratch/workshop_ckpts/runs/2023-09-18_23-46-54/checkpoints/epoch_038.ckpt
+ckpt_path: path/to/checkpoint/path
 output_dir: ./explanations
 
 explain:

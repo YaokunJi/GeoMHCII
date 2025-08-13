@@ -52,7 +52,7 @@ parameters:
     values:
       [
         "none",
-        "/home/atj39/github/protein-workshop/checkpoints/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/last.ckpt",
+        "path/to/checkpoint",
       ]
 
   +test:

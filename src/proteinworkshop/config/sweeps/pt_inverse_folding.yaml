@@ -51,7 +51,7 @@ parameters:
     values:
       [
         # Note: One needed to manually update this path to point to the one's corresponding `last.ckpt` pre-trained checkpoint
-        "/home/jamasba/scratch/pworkshop/ckpts/${_pre_train_task}/${hydra:runtime.choices.encoder}/${hydra:runtime.choices.features}/${_pt_epoch}.ckpt",
+        "path/to/checkpoint",
       ]
 
   +test:
