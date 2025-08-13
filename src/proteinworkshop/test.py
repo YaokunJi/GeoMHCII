@@ -27,7 +27,7 @@ graphein.verbose(False)
 lt.monkey_patch()
 import numpy as np #
 import pandas as pd #
-def testing(cfg: DictConfig):
+def test(cfg: DictConfig):
     assert cfg.ckpt_path, "No checkpoint path provided."
 
     L.seed_everything(cfg.seed)
@@ -120,7 +120,7 @@ def testing(cfg: DictConfig):
         model = torch.compile(model)  # type: ignore
 
     if cfg.get("test"):
-        log.info("Starting testing!")
+        log.info("Starting to test!")
         # Run test on all splits if using fold_classification dataset
         if (
             cfg.dataset.datamodule._target_
@@ -151,7 +151,7 @@ def _main(cfg: DictConfig) -> None:
     # (e.g. ask for tags if none are provided in cfg, print cfg tree, etc.)
     utils.extras(cfg)
     # cfg = config.validate_config(cfg)
-    testing(cfg)
+    test(cfg)
 
 
 def _script_main(args):
