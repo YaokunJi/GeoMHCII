@@ -454,7 +454,7 @@ class BenchMarkModel(BaseModel):
         :rtype: ProteinBatch
         """
         with torch.no_grad():
-            ss = Protein() ### 这里不知道为什么会卡住，显式地导入类似乎就自然好了，存在bug
+            obj_check = Protein()
             proteins = [
                 get_random_protein()
                 for _ in range(self.config.dataset.datamodule.batch_size)

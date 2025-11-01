@@ -69,7 +69,7 @@ def _download(
     return save_file
 
 
-class GeoMHCIIModel(nn.Module): ###
+class GeoMHCIIModel(nn.Module):
     """
     The protein language model, Evolutionary Scale Modeling (ESM) proposed in
     `Biological Structure and Function Emerge from Scaling Unsupervised Learning to 250 Million Protein Sequences`_.
